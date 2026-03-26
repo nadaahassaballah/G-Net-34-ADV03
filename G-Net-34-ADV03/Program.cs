@@ -57,6 +57,42 @@
             foreach (var i in Leaderboard)
                 Console.WriteLine($"{i.Key},{i.Value}");
             #endregion
+
+            #region Q3
+            Dictionary<string, int> PhoneBook = new()
+            {
+                ["AH"] = 011,
+                ["BC"] = 012,
+
+
+            };
+            PhoneBook["LN"] = 23;
+            PhoneBook["AH"] = 013;
+            //PhoneBook.Add("AH", 23);
+            PhoneBook.TryAdd("AH", 23);
+            Console.WriteLine( PhoneBook.ContainsKey("sdd"));
+
+            if (PhoneBook.TryGetValue("LN", out int vvalue))
+            {
+                Console.WriteLine(vvalue);
+            }
+            else
+                Console.WriteLine("Not Found");
+
+            Console.WriteLine("KEYS:");
+            foreach(var i in PhoneBook.Keys){
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("VALUES:");
+
+            foreach (var i in PhoneBook.Values)
+            {
+                Console.WriteLine(i);
+            }
+
+
+
+            #endregion
         }
     }
 }
