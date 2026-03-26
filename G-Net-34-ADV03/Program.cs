@@ -30,6 +30,33 @@
                 Console.WriteLine(g);
             }
             #endregion
+
+            #region q2
+            SortedList<int, string> Leaderboard = new()
+            {
+                [500] = "Ahmed",
+               [ 200] = "Sara",
+                [800] = "Ali",
+               [ 350] = "Mona"
+            };
+            foreach (var i in Leaderboard)
+                Console.WriteLine($"{i.Key},{i.Value}");
+
+            Console.WriteLine($" first key :{Leaderboard.Keys[0]}, first value{Leaderboard.Values[0]}");
+            bool contain = Leaderboard.ContainsKey(500);
+            Console.WriteLine($"500 in lis ??{contain}");
+            if (Leaderboard.TryGetValue(900, out var value))
+            {
+                Console.WriteLine(value);
+            }
+            else
+            {
+                Console.WriteLine("not exists");
+            }
+            Leaderboard.Remove(200);
+            foreach (var i in Leaderboard)
+                Console.WriteLine($"{i.Key},{i.Value}");
+            #endregion
         }
     }
 }
