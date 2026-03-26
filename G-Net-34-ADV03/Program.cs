@@ -95,67 +95,87 @@
             #endregion
 
             #region q4
-//            HashSet<string> email = new(StringComparer.OrdinalIgnoreCase)
-//            {
-//"ahmed@test.com",
-//                "AHMED@test.com",
-//                "sara@test.com"
-//, "Sara@Test.Com"
+            //            HashSet<string> email = new(StringComparer.OrdinalIgnoreCase)
+            //            {
+            //"ahmed@test.com",
+            //                "AHMED@test.com",
+            //                "sara@test.com"
+            //, "Sara@Test.Com"
 
-//            };
-//            Console.WriteLine(email.Count);
-//            //because hash dont duplicate
-//            HashSet<int> a = [1, 2, 3, 4, 5];
-//            HashSet<int> b = [4, 5, 6, 7, 8];
-//            HashSet<int> Union = new(a);
+            //            };
+            //            Console.WriteLine(email.Count);
+            //            //because hash dont duplicate
+            //            HashSet<int> a = [1, 2, 3, 4, 5];
+            //            HashSet<int> b = [4, 5, 6, 7, 8];
+            //            HashSet<int> Union = new(a);
 
-//            Union.UnionWith(b);
-//            Helper.PrintHashSet("A Union B", Union);
+            //            Union.UnionWith(b);
+            //            Helper.PrintHashSet("A Union B", Union);
 
-//            HashSet<int> intersect = new(a);
+            //            HashSet<int> intersect = new(a);
 
-//            intersect.IntersectWith(b);
-//            Helper.PrintHashSet("A intersect B", intersect);
-//            HashSet<int> exp = new(a);
+            //            intersect.IntersectWith(b);
+            //            Helper.PrintHashSet("A intersect B", intersect);
+            //            HashSet<int> exp = new(a);
 
-//           exp.ExceptWith(b);
-//            Helper.PrintHashSet("A except B", exp);
+            //           exp.ExceptWith(b);
+            //            Helper.PrintHashSet("A except B", exp);
 
 
-//            HashSet<int> c = [1,2];
+            //            HashSet<int> c = [1,2];
 
-//            bool isSubset = c.IsSubsetOf(b);
-//            Console.WriteLine("is [1,2]is the subset");
-//            Console.WriteLine(isSubset);
+            //            bool isSubset = c.IsSubsetOf(b);
+            //            Console.WriteLine("is [1,2]is the subset");
+            //            Console.WriteLine(isSubset);
 
             #endregion
 
             #region q5
 
-            Queue<string> documents = new();
-            documents.Enqueue("Report.pdf");
-            documents.Enqueue("Invoice.pdf");
-            documents.Enqueue("Letter.docx");
-            documents.Enqueue("Resume.pdf");
-            documents.Enqueue("Photo.jpg");
-            Console.WriteLine($"documentaion count {documents.Count}");
+            //Queue<string> documents = new();
+            //documents.Enqueue("Report.pdf");
+            //documents.Enqueue("Invoice.pdf");
+            //documents.Enqueue("Letter.docx");
+            //documents.Enqueue("Resume.pdf");
+            //documents.Enqueue("Photo.jpg");
+            //Console.WriteLine($"documentaion count {documents.Count}");
 
-            Console.WriteLine($"documentaion peek {documents.Peek()}");
-            Console.WriteLine($"documentaion dequeue {documents.Dequeue()}");
+            //Console.WriteLine($"documentaion peek {documents.Peek()}");
+            //Console.WriteLine($"documentaion dequeue {documents.Dequeue()}");
 
-            Helper.PrintQueue("documents",documents);
+            //Helper.PrintQueue("documents",documents);
 
-            Queue<string> documents2 = new();
+            //Queue<string> documents2 = new();
 
-            if (documents2.TryDequeue(out string value))
-                Console.WriteLine(value);
-            else
-                Console.WriteLine("Queue is empty");
+            //if (documents2.TryDequeue(out string value))
+            //    Console.WriteLine(value);
+            //else
+            //    Console.WriteLine("Queue is empty");
 
 
             #endregion
 
             #region q6
+            Stack<string> browserhistory = new();
+            browserhistory.Push("google.com");
+            browserhistory.Push("github.com");
+            browserhistory.Push("stackoverflow.com");
+            browserhistory.Push("youtube.com");
+            browserhistory.Push("claude.ai");
+            Console.WriteLine($"browserhistory peek {browserhistory.Peek()}");
+            Console.WriteLine($"browserhistory pop {browserhistory.Pop()}");
+            Console.WriteLine($"browserhistory pop {browserhistory.Pop()}");
+            Console.WriteLine($"browserhistory pop {browserhistory.Pop()}");
+            Console.WriteLine($"browserhistory peek {browserhistory.Peek()}");
+            browserhistory.Pop();
+            browserhistory.Pop();
+            if (browserhistory.TryPop(out string value))
+            {
+                Console.WriteLine(value);
+
+            }
+            else
+                Console.WriteLine("its empty");
             #endregion
         }
     }
